@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import Description from "./Description";
-import Feedback from "./Feedback";
 import Options from "./Options";
 import Notification from "./Notification";
 
@@ -55,7 +54,10 @@ export default function App() {
       />
       {totalFeedback > 0 ? (
         <>
-          <Feedback feedbackTypes={feedbackTypes} />
+          <p>Good: {feedbackTypes.good}</p>
+          <p>Neutral: {feedbackTypes.neutral}</p>
+          <p>Bad: {feedbackTypes.bad}</p>
+          <p>Total: {totalFeedback}</p>
           
           <p>Positive: {positiveFeedbackPercentage}%</p>
         </>
